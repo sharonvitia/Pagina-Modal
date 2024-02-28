@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Lección 6</title>
+  <link rel="stylesheet" href="/css/codigo.css">
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <!-- Agrega las referencias a Bootstrap CSS y JS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <style>
+    /* Agrega estilos personalizados según sea necesario */
+
+    #irArribaBtn {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    body {
+      /* Definir un gradiente lineal para el fondo */
+      background: linear-gradient(to bottom, #87CEEB, #ffffff);
+    }
+
+    .difuminado {
+      color: #007BFF;
+      /* Color azul */
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      /* Sombras para el efecto de difuminado */
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Punto 1: Mostrar alerta al iniciar la página -->
+  <script>
+    $(document).ready(function () {
+      alert("¡Bienvenido!");
+    });
+  </script>
+
+  <!-- Punto 2: Agregar modal de Bootstrap -->
+  <div class="container mt-5 text-center">
+    <h1 class="text-success font-weight-bold underline">Este esta pagina tiene un Modal</h1>
+  </div>
+  <br>
+  <div class="container">
+    <button type="button" class="btn btn-primary mx-auto d-block mt-3" data-toggle="modal" data-target="#miModal">
+      Abrir Modal
+    </button>
+    <br>
+    <div class="container d-flex justify-content-center aling-items-center ">
+      <img src="/Clase 26-02/Tarea jquery/img/jq.jpg" alt="Imagen" class="img-fluid">
+    </div>
+  </div>
+  <br>
+
+  <div class="container mt-3">
+    <h3 class="text-center difuminado">El siguiente texto es para usar el botón para subir</h3>
+  </div>
+  <div class="container mt-5">
+    <p class="text-justify text-primary ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis quod assumenda velit
+      dignissimos reiciendis earum officiis veritatis ut! Quidem quas inventore harum officiis placeat quia accusantium
+      distinctio, expedita consequuntur odit?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore porro
+      placeat consequuntur voluptate magnam quo temporibus, culpa officiis provident sunt cum, qui maxime harum id
+      asperiores? Quos voluptas libero fuga. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam,
+      accusamus maxime harum, culpa odit minima delectus laborum totam, ea a perferendis. Aut impedit temporibus, rem ab
+      iste hic facere eaque!</p>
+    <p class="text-justify text-primary ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, quam libero atque
+      quisquam odit non excepturi, reiciendis fugiat rem ut corrupti aperiam delectus velit eius temporibus? Mollitia
+      veniam odit corporis! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est eaque veniam id praesentium.
+      Dolor quo quia ea tempore, exercitationem nulla placeat, debitis iure velit animi neque similique tenetur eveniet
+      consectetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus nisi minima a aliquam incidunt
+      facilis voluptates consequuntur tempora quam veniam, voluptate deserunt dolorem, commodi neque at ratione earum
+      quisquam perspiciatis!</p>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal" id="miModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <!-- Contenido del modal -->
+        <div class="modal-header">
+          <h4 class="modal-title">MENSAJE IMPORTANTE</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <p>DESARROLLO DE APLICACIONES FULL STACK PYTHON TRAINEE .</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!-- Punto 3: Botón "Ir arriba" con Bootstrap -->
+  <button type="button" class="btn btn-secondary" id="irArribaBtn">Ir arriba</button>
+
+  <!-- Script para scroll suave hacia arriba -->
+  <script>
+    $("#irArribaBtn").click(function () {
+      $("html, body").animate({ scrollTop: 0 }, "slow");
+    });
+  </script>
+
+</body>
+
+</html>
